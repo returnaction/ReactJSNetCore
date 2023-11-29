@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "189c6b35-c2be-4a22-b797-1b9426b7d61c",
+		"name": "ReactJSNetCore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28100906"
+	},
+	"item": [
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "Get Departments",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Post Department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"departmentName\": \"Test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7199/api/Department",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7199",
+							"path": [
+								"api",
+								"Department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"departmentName\": \"IT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7199/api/Department/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7199",
+							"path": [
+								"api",
+								"Department",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7199/api/Department/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7199",
+							"path": [
+								"api",
+								"Department",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "Get Employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7199/api/Employee",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7199",
+							"path": [
+								"api",
+								"Employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeName\": \"Nik\",\r\n    \"department\": \"IT\",\r\n    \"dateOfJoining\": \"2020-06-09\",\r\n    \"photoFileName\": \"anonymous.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7199/api/Employee",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7199",
+							"path": [
+								"api",
+								"Employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"employeeName\": \"Bob\",\r\n        \"department\": \"IT\",\r\n        \"dateOfJoining\": \"2019-06-19\",\r\n        \"photoFileName\": \"anonymous.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7199/api/Employee/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7199",
+							"path": [
+								"api",
+								"Employee",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Del Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7199/api/Employee/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7199",
+							"path": [
+								"api",
+								"Employee",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Oberg/OneDrive/Desktop/anonymous.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:7199/api/Employee/SaveFile",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7199",
+							"path": [
+								"api",
+								"Employee",
+								"SaveFile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
